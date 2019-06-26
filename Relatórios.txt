@@ -1,0 +1,19 @@
+NOTAS DE TRABALHO DE 25/06/19
+
+-Implementação dos cod html que puxa as strings pra mostrar no web server
+- Início do conhecimento sobre mongo db , banco de dados nosql com node.js , devido a facilidade de comunicação entre nosql e JavaS
+- JSon
+-
+-
+-
+-
+
+NOTAS DE TRABALHO DE 26/06/19
+-REVISÃO git
+- tutorial esp idf
+- package json, estruturação da database em mongo db, compreenssão da estrurura da cloud oferecida
+-
+-
+
+NOTAS DE TRABALHO DE 27/06/19
+
