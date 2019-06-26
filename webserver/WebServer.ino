@@ -9,10 +9,11 @@
 int x, y, z;
 
 
-const char* ssid = "Millennium Falcon";
-const char* password = "19072008";
+const char* ssid = "Mi Phone";
+const char* password = "12345678";
 
-ESP8266WebServer server(4444);
+ESP8266WebServer server(8888);
+
 String createJsonResponse() {
   
   StaticJsonBuffer<300> jsonBuffer;
@@ -27,8 +28,6 @@ String createJsonResponse() {
   JsonObject& accelYl = accel.createNestedObject("y");
   JsonObject& accelZl = accel.createNestedObject("z");
  
-
-
   object["nodeID"] = "esp8266";
  
   accel["x"] = x;
@@ -58,7 +57,7 @@ void setupADXL345(){
   delay(500);
   
 }
-
+ 
 int readADXL345() {    
   Wire.beginTransmission(0x53);
   Wire.write(0x32);
@@ -69,24 +68,22 @@ int readADXL345() {
   y = Wire.read()<<8|Wire.read(); 
   z = Wire.read()<<8|Wire.read(); 
   return x;
- 
- 
   
   delay(200);
     
 }
 
-
 void handleRoot() {
-
-
 
 String textoHTML;
 
-  textoHTML = "<center> DATA FROM ADXL345 REGISTERS</center>";
+  textoHTML = "<center> DATA FROM Accelerometer ADXL345 REGISTERS</center>";
   textoHTML += "<html><head><style>table, th, td {border: 1px solid black;}</style><meta http-equiv='refresh' content='3'></head><body><table><tr><th>Modulo</th><th>Eixo X</th>  <th>Eixo Y</th>  <th>Eixo Z</th>   </tr>    <td>Acelerometro</td>    <td><script></script></td>    <td>accelY</td>    <td>accelZ</td>  </tr> </table></body></html>";
-  textoHTML +=  "<html><body><p><a href=https://github.com/JACYEUDE/PROJECT_1.0>gitHub</a>";
+  textoHTML +=  "<html><body><p><a href=https://github.com/JACYEUDE/PROJECT_1.0>knowledge</a>";
   textoHTML +=  "<html><body><p><a href=http://127.0.0.1:5500/nodejs-server/public/index.html>LINK</a></p>";
+      
+  
+  textoHTML += "<h3 style=text-align:body;font-family:arial;> bemvindo a jsk database : ";
   
   textoHTML += "<h3 style=text-align:center;font-family:tahoma;> X : " +String (x);
   
@@ -94,7 +91,7 @@ String textoHTML;
   
   textoHTML += "<h3 style=text-align:center;font-family:tahoma;> Z : " + String (z);
  
-  server.send(200, "text/html", textoHTML);
+  server.send(300, "text/html", textoHTML);
  
 }
 
@@ -129,7 +126,7 @@ void setup(void){
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    Serial.print("..loading..");
+    Serial.print(".loading.");
   }
   Serial.println("");
   Serial.print("Connected to ");
@@ -164,9 +161,11 @@ Serial.println(y);
 Serial.print("Acceleration in Z : ");
 Serial.println(z);
 
-delay(500);
+Serial.println(createJsonResponse());
 
-Serial.println(createJsonResponse());  
+delay(1700);
+
+  
 server.handleClient(); 
 
 delay(200);
