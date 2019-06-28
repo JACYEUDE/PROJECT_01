@@ -83,7 +83,7 @@ String textoHTML;
   textoHTML +=  "<html><body><p><a href=http://127.0.0.1:5500/nodejs-server/public/index.html>LINK</a></p>";
       
   
-  textoHTML += "<h3 style=text-align:body;font-family:arial;> bemvindo a jsk database : ";
+  textoHTML += "<h3 style=text-align:body;font-family:arial;> Hello prof Leonardo : ";
   
   textoHTML += "<h3 style=text-align:center;font-family:tahoma;> X : " +String (x);
   
