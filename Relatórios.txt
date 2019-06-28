@@ -84,4 +84,25 @@ HIGH PRECISION works
 
 
 NOTAS DE TRABALHO DE 27/06/19
+NOTAS SOBRE EXTENSÕES
+
+
+-arquivos de cabeçalho (ou "header") possuem extensão .h e servem para melhor organizar o seu código (programa) em módulos ou bibliotecas. Tipicamente, arquivos .h contém
+
+definições de tipos (structs, typedefs, etc.);
+protótipos de funções.
+Normalmente, procura-se agrupar no mesmo arquivo funções e tipos que possuem algo em comumfirmando uma "biblioteca" (por exemplo, biblioteca de funções matemáticas - math.h, biblioteca-padrão - stdlib.h, e assim por diante).
+
+-arquivos .o são arquivos binários vulgarmente conhecidos como "objeto"; linkados com vários outros componentes (eventualmente outros .o) acabam por participar de um arquivo final, executável.
+
+-uma extensão de arquivo que termina em .a. Os arquivos com a extensão do arquivo .a só pode ser iniciado por determinadas aplicações. É possível que a .a arquivos são arquivos de dados em vez de documentos ou meios de comunicação, o que significa que não está destinado a ser visto em todos.
+
+- MANIPULADOR DE ARQUIVO
+
+
+-
+
+-
+
+-
 

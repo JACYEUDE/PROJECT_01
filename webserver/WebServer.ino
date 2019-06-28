@@ -9,10 +9,10 @@
 int x, y, z;
 
 
-const char* ssid = "Mi Phone";
-const char* password = "12345678";
+const char* ssid = "Millennium Falcon";
+const char* password = "19072008";
 
-ESP8266WebServer server(8888);
+ESP8266WebServer server(7777);
 
 String createJsonResponse() {
   
@@ -151,7 +151,7 @@ void setup(void){
 }
 
 void loop(void){
-
+server.handleClient(); 
 readADXL345();
 delay(100);
 Serial.print("Acceleration in X : ");
@@ -166,7 +166,7 @@ Serial.println(createJsonResponse());
 delay(1700);
 
   
-server.handleClient(); 
+
 
 delay(200);
 }
