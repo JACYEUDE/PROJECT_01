@@ -105,4 +105,18 @@ Normalmente, procura-se agrupar no mesmo arquivo funções e tipos que possuem alg
 -
 
 -
+28/06/19
+
+-saber quantas leitura podemos ter por segundo , fazer um estudo aplicado sobre hardware, vendo a precisão das nossas medições.
+
+-kanban
+
+
+-
+
+
+-
+
+
+-
 

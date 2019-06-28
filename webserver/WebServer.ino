@@ -78,12 +78,12 @@ void handleRoot() {
 String textoHTML;
 
   textoHTML = "<center> DATA FROM Accelerometer ADXL345 REGISTERS</center>";
-  textoHTML += "<html><head><style>table, th, td {border: 1px solid black;}</style><meta http-equiv='refresh' content='3'></head><body><table><tr><th>Modulo</th><th>Eixo X</th>  <th>Eixo Y</th>  <th>Eixo Z</th>   </tr>    <td>Acelerometro</td>    <td><script></script></td>    <td>accelY</td>    <td>accelZ</td>  </tr> </table></body></html>";
+  textoHTML += "<html><head><style>table, th, td {border: 1px solid black;}</style><meta http-equiv='refresh' content='2'></head><body><table><tr><th>Modulo</th><th>Eixo X</th>  <th>Eixo Y</th>  <th>Eixo Z</th>   </tr>    <td>Acelerometro</td>    <td><script></script></td>    <td>accelY</td>    <td>accelZ</td>  </tr> </table></body></html>";
   textoHTML +=  "<html><body><p><a href=https://github.com/JACYEUDE/PROJECT_1.0>knowledge</a>";
   textoHTML +=  "<html><body><p><a href=http://127.0.0.1:5500/nodejs-server/public/index.html>LINK</a></p>";
       
   
-  textoHTML += "<h3 style=text-align:body;font-family:arial;> Hello prof Leonardo : ";
+  textoHTML += "<h3 style=text-align:body;font-family:arial;>  HELLO bacaninha ";
   
   textoHTML += "<h3 style=text-align:center;font-family:tahoma;> X : " +String (x);
   
@@ -163,7 +163,7 @@ Serial.println(z);
 
 Serial.println(createJsonResponse());
 
-delay(1700);
+delay(1000);
 
   
 
