@@ -1,4 +1,4 @@
-~considerações para levar a sério quando se pensa em progamar ;
+~considerações para levar quando se pensa em progamar ;
 
 
 
@@ -117,12 +117,107 @@ Normalmente, procura-se agrupar no mesmo arquivo funções e tipos que possuem alg
 01/07/2019
 
 
-- ALINHAMENTO EM RELAÇÃO AO ESQUELETO DA ESTRUTURA DO TRABALHO, PARA FACILITAR A ESCRITA DO TRABALHO.
+- ALINHAMENTO EM RELAÇÃO AO ESQUELETO DA ESTRUTURA DO TRABALHO, PARA FACILITAR A ESCRITA.
 
 - Escrita do cronograma xls
 
-- 
+- void setup () {
+
+
+1 - Which device (address) are ou interest in ?
+
+2 - Whic Register do you want to talk to ?
+
+3 - What do you want the register to transmit ? 
+
+}
+
+void loop () {
+
+4 - what do you to ask about the specific register ?
+
+5 - Now wait for the data looping in while...
+
+6 -  Now how do you want the configuration of the three axes numbers ? 
+
+}
+
+- NÃO ESQUECER DE REALIZAR A ESTRUTURAÇÃO DO DOC REAL QUE SERÁ USADO NA REEDIÇÃO DO TRABALHO ESCRITO. FUNDAMENTAR TB A ESTRUTURAÇÃO DO DESENVOLVIMENTO DE UMA APLICAÇÃO  , DANDO ATENÇÃO A DIFICULDADES , E CAMINHO S PERCORRIDO PARA TOMAR DECISÕES. 
 
 -
 
+Em vibration studies analisys 
+article 2008
+The method allows off-line fault detection. In this study, we take into consideration the bearing faults. This type of faults reveals in the vibration spectrum some sidebands, which have specific frequencies.To carry out this analysis, we don’t need the most precise model of the machine in order to be able make an effective diagnosis.
+
+In recent years, intensive research [2] effort has been focused on the technique of monitoring and diagnosis of electrical machines and can be summarized as follows.
+
+· Time and frequency domain analysis.
+· Time domain analysis of the electromagnetic torque and
+flux phasor.
+· Temperature measurement, infrared recognition, radio
+frequency (RF) emission monitoring,
+· Motor current signature analysis (MCSA)
+· Detection by space vector angular fluctuation (SVAF)
+· Noise and vibration monitoring,
+· Acoustic noise measurements,
+· Harmonic analysis of motor torque and speed,
+· Model, artificial intelligence and neural network based
+techniques.
+Vibrations are natural processes in electrical machines
+and are created by the same dynamic forces.
+The human being directly perceives only a small range
+of low frequency vibrations. The oscillation velocity is
+turning the vibration into noise.
+
+
+Vibration and current analysis is a remote, notintrusive way to test the electrical machine being monitored. It is based on the analysis of the vibration and
+current waveform using complex mathematics.
+
+It is known that mechanical problems can cause a
+motor to seem to have significant electrical problems
+when being evaluated without vibration analysis. As an
+example a severely misalign shaft can create a variable
+air gap between stator and rotor. Therefore it is a good
+method to make a detailed motor vibration analysis.
+Vibration and current monitoring system requires
+storing of a large amount of data. Vibration is often
+measured with multiple sensors mounted on different
+parts of the machine. For each machine there are several
+typical vibration signals being analyzed in addition to
+some static parameters like load. 
+
+Vibration diagnostics 
+
+Vibration control and vibration diagnostics are
+different practical problems. In vibration diagnostics, the
+oscillation force that is applied to the defective zone
+defines the fault and the force is linearly related with the
+oscillation acceleration. For diagnostics, often both the
+vibration-acceleration and the vibration-velocity are
+measured in restricted low frequency ranges.
+
+The vibration signal is converted in electric signals. It
+is necessary to analyze this signal without loosing the
+diagnostic information. There are very strict requirements
+for the analyzing instruments. The operations that the
+vibration analyzing instruments must perform are the
+following:
+• Measurement of overall vibration level in a standard
+frequency range and using the units required by these
+standards.
+• Spectral analysis of the vibration, by using FFT.
+• Analysis of the oscillation power of separate
+vibration components extracted preliminary from the
+vibration signal. The analysis of the spectrum of random
+high frequency vibration signal is usually used 
+
+
+The analysis of vibration spectrum is used for the
+detection of bearing faults. The faults detection will be
+done by comparing two values: the amplitudes of the
+armonic components obtained from monitoring the
+vibration spectrum at different frequencies and the
+amplitudes of the armonic components at the same
+frequencies obtained from the reference spectrum
 -
