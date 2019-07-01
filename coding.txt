@@ -1,0 +1,9 @@
+* Building c++ application
+	-Dev enviroment to build regular c based ESP32 app using ESP-IDF. (mingw32)
+	-Clone ESP-IDF template to build c app. (https://github.com/espressif/esp-idf-template.git)
+	-Change SDK config. (make config)
+	-Compile ESP-IDF. (j5)
+
+// Agora temos um ambiente em c//
+
+*Writing code
