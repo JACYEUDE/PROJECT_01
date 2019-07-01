@@ -117,9 +117,9 @@ Normalmente, procura-se agrupar no mesmo arquivo funções e tipos que possuem alg
 
 - ALINHAMENTO EM RELAÇÃO AO ESQUELETO DA ESTRUTURA DO TRABALHO, PARA FACILITAR A ESCRITA DO TRABALHO.
 
-- escrita do cronograma xls
+- Escrita do cronograma xls
 
--
+- 
 
 -
 
