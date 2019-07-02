@@ -7,6 +7,8 @@
 // Agora temos um ambiente em c//
 
 *HTTP Request
-Rest call - Habilidade de invocar um serviço através de protocolos TPC/IP ou HTTP. São basicamente a tecnologia de serviço ao cliente que está gerenciando web servers(?WSDM?). Isso faz com que o ESP32 seja capaz de fazer uma "Rest Call" à um provedor de serviço que ira receber essa call, trabalhar internamente e retornar uma reposta. 
+Rest call - Habilidade de invocar um serviço através de protocolos TPC/IP ou HTTP. São basicamente a tecnologia de serviço ao cliente que está gerenciando web servers(?WSDM?). Isso faz com que o ESP32 seja capaz de fazer uma "Rest Call" à um provedor de serviço que ira receber essa call, trabalhar internamente e retornar uma reposta. É, em resumo, uma request envelopada em um protocolo HTTP com uma URL e uma Payload que quando enviada a um servidor, que provavelmente está portando um código que fará alguma lógica, recebe uma resposta de volta.
+
+
 
 *lib CUrl
