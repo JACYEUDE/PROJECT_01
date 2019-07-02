@@ -1,0 +1,98 @@
+LEARN C . QUESTIONS , APPLICATION , METHODS , FUNCTION , STATEMENTS
+
+A function is a collection of statements that executes sequentially.
+
+save words 
+
+regard"que diz respeito",convey"trasnmitir",kind,fairly"bastante"  append"acrescentão",  whereby "através do qual",assurance "garantia" , noise "barulho", allows"permite" , allows "permite" , carry "transportar" ,  shorting"curto-circuito" ,
+
+
+
+Statements
+
+A computer program is a sequence of instructions that tell the computer what to do. A statement is a type of instruction that causes the program to perform some action.
+
+1 Declaration Statements
+2 Jump statements
+3 Expression statements
+4 Compund statements
+5 Selection statements (conditionals)
+6 Iteration statements (loops)
+7 try blocks
+
+
+
+Functions and the main function
+
+In C++, statements are typically grouped into units called functions. A function is a collection of statements that executes sequentially. As you learn to write your own programs, you’ll be able to create your own functions and mix and match statements in any way you please (we’ll show how in a future lesson).
+
+Objects and variables
+
+RAM (random access memory)
+
+You can think of RAM as a series of mailboxes that can be used to hold data while the program is running. A single piece of data, stored in memory somewhere, is called a value.
+
+An object is region of storage (usually memory) that has a value and other associated properties (that we’ll cover in future lessons). When an object is defined, the compiler automatically determines where the object will be placed in memory.
+
+A named object is called a variable, and the name of the object is called an identifier. In our programs, most of the objects we create will be variables.
+
+
+In order to create a variable, we use a special kind of declaration statement called a definition (we’ll clarify the difference between a declaration and definition later).
+
+Here’s an example of defining a variable named x:
+code:
+1 int x; // define a variable named x, of type int
+
+
+It is possible to define multiple variables of the same type in a single statement by separating the names with a comma. The following 2 snippets of code are effectively the same:
+
+1 int a;
+2 int b;
+
+is the same as:
+
+1 int a, b;
+
+When defining multiple variables this way, there are two common mistakes that new programmers tend to make (neither serious, since the compiler will catch these and ask you to fix them):
+
+The first mistake is giving each variable a type when defining variables in sequence.
+
+1 int a, int b; // wrong (compiler error)
+2
+3 int a, b; // correct
+
+
+
+ESTUDO 1/07
+
+
+Em vibration studies analisys 
+article 2008
+The method allows off-line fault detection. In this study, we take into consideration the bearing faults. This type of faults reveals in the vibration spectrum some sidebands, which have specific frequencies.To carry out this analysis, we don’t need the most precise model of the machine in order to be able make an effective diagnosis.
+
+In recent years, intensive research [2] effort has been focused on the technique of monitoring and diagnosis of electrical machines and can be summarized as follows.
+
+· Time and frequency domain analysis.
+· Time domain analysis of the electromagnetic torque and
+flux phasor.
+· Temperature measurement, infrared recognition, radio
+frequency (RF) emission monitoring,
+· Motor current signature analysis (MCSA)
+· Detection by space vector angular fluctuation (SVAF)
+· Noise and vibration monitoring,
+· Acoustic noise measurements,
+· Harmonic analysis of motor torque and speed,
+· Model, artificial intelligence and neural network based
+techniques.
+Vibrations are natural processes in electrical machines
+and are created by the same dynamic forces.
+The human being directly perceives only a small range
+of low frequency vibrations. The oscillation velocity is
+turning the vibration into noise. 
+
+ 
+
+
+
+
+

@@ -1,0 +1,223 @@
+~considerações para levar quando se pensa em progamar ;
+
+
+
+NOTAS DE TRABALHO DE 25/06/19
+
+-Implementação dos cod html que puxa as strings pra mostrar no web server
+- Início do conhecimento sobre mongo db , banco de dados nosql com node.js , devido a facilidade de comunicação entre nosql e JavaS
+- JSon
+-
+
+
+NOTAS DE TRABALHO DE 26/06/19
+-REVISÃO git
+- tutorial esp idf
+- package json, estruturação da database em mongo db, compreenssão da estrurura da cloud oferecida
+-
+- TERMOS IMPORTANTES PARA O CONTEXTO GERAL DE PROGRAMAÇÃO 
+
+
+BUILD 
+
+Build, no contexto do desenvolvimento de software, é uma versão "compilada" de um software ou parte dele que contém um conjunto de recursos que poderão integrar o produto final.
+
+ASSEMBLY
+
+
+HTTP E HTTPS PROTOCOL
+
+Protocolo de transferência de hipertexto, permitindo a comunicação de web sites , junto a outros protocolos como tcp / ip.
+trabalha com requisições entre client/service
+
+GET solicita ao server o acesso 
+HEAD nesete metodo o sever trás o retorno para o client 
+
+https é uma camada de reforço de segurança da comunicação  entre cliente/servidor
+
+
+
+COMPILE
+
+transcrever a linguagem de um codigo escrita para a máquina/dispositivo
+
+DEBUG
+
+Processo de encontrar e remover run time erros do código, tratando da verificação da montagem da estrututa do código, permitindo que seja inspecionado. 
+
+FIRMWARE
+
+Software embarcado , instruções operacionais programadas diretamente no hardware.
+tipo de software específico e colocar em um hardware, geralmente desenvolvido por fabricantes do microchip.
+
+
+memoria rom- read only memory
+FLASH MEMORY
+
+Recebe esse nome pois ela utiliza eletricidade para salvar e ler o seus dados. é possível conservar o seu conteúdo mesmo após a ausência de energia elétrica. 
+
+
+METHOD
+
+usado para executar funções dentro de uma classse, tem caracteristicas parecidas com a function mas não tem returno de valor , executa um loop ou void ex.
+
+OBJECT 
+
+é algo destinguível que contém atributos e possui um comportamento. mesmo que possua os mesmos atributos de outro objeto, ainda assim são diferentes. 
+<modificador><tipo><name>  , name é objetc
+
+FUNCTION
+
+caminho entre argumentos e valores
+single piece of code that does one particular job. return a value  int print("") len() , pode usar uma função dentro da outra.
+
+
+Sintaxe
+
+<[]>
+
+Atributos
+
+conjunto de propriedades da classe , variáveis
+
+
+HIGH PRECISION works
+
+
+
+NOTAS DE TRABALHO DE 27/06/19
+NOTAS SOBRE EXTENSÕES
+
+
+-arquivos de cabeçalho (ou "header") possuem extensão .h e servem para melhor organizar o seu código (programa) em módulos ou bibliotecas. Tipicamente, arquivos .h contém
+
+definições de tipos (structs, typedefs, etc.);
+protótipos de funções.
+Normalmente, procura-se agrupar no mesmo arquivo funções e tipos que possuem algo em comumfirmando uma "biblioteca" (por exemplo, biblioteca de funções matemáticas - math.h, biblioteca-padrão - stdlib.h, e assim por diante).
+
+-arquivos .o são arquivos binários vulgarmente conhecidos como "objeto"; linkados com vários outros componentes (eventualmente outros .o) acabam por participar de um arquivo final, executável.
+
+-uma extensão de arquivo que termina em .a. Os arquivos com a extensão do arquivo .a só pode ser iniciado por determinadas aplicações. É possível que a .a arquivos são arquivos de dados em vez de documentos ou meios de comunicação, o que significa que não está destinado a ser visto em todos.
+
+- MANIPULADOR DE ARQUIVO
+
+
+-
+
+
+28/06/19
+
+-saber quantas leitura podemos ter por segundo , fazer um estudo aplicado sobre hardware, vendo a precisão das nossas medições.
+
+-kanban
+
+
+-
+
+01/07/2019
+
+
+- ALINHAMENTO EM RELAÇÃO AO ESQUELETO DA ESTRUTURA DO TRABALHO, PARA FACILITAR A ESCRITA.
+
+- Escrita do cronograma xls
+
+- void setup () {
+
+
+1 - Which device (address) are ou interest in ?
+
+2 - Whic Register do you want to talk to ?
+
+3 - What do you want the register to transmit ? 
+
+}
+
+void loop () {
+
+4 - what do you to ask about the specific register ?
+
+5 - Now wait for the data looping in while...
+
+6 -  Now how do you want the configuration of the three axes numbers ? 
+
+}
+
+- NÃO ESQUECER DE REALIZAR A ESTRUTURAÇÃO DO DOC REAL QUE SERÁ USADO NA REEDIÇÃO DO TRABALHO ESCRITO. FUNDAMENTAR TB A ESTRUTURAÇÃO DO DESENVOLVIMENTO DE UMA APLICAÇÃO  , DANDO ATENÇÃO A DIFICULDADES , E CAMINHO S PERCORRIDO PARA TOMAR DECISÕES. 
+
+-
+
+Em vibration studies analisys 
+article 2008
+The method allows off-line fault detection. In this study, we take into consideration the bearing faults. This type of faults reveals in the vibration spectrum some sidebands, which have specific frequencies.To carry out this analysis, we don’t need the most precise model of the machine in order to be able make an effective diagnosis.
+
+In recent years, intensive research [2] effort has been focused on the technique of monitoring and diagnosis of electrical machines and can be summarized as follows.
+
+· Time and frequency domain analysis.
+· Time domain analysis of the electromagnetic torque and
+flux phasor.
+· Temperature measurement, infrared recognition, radio
+frequency (RF) emission monitoring,
+· Motor current signature analysis (MCSA)
+· Detection by space vector angular fluctuation (SVAF)
+· Noise and vibration monitoring,
+· Acoustic noise measurements,
+· Harmonic analysis of motor torque and speed,
+· Model, artificial intelligence and neural network based
+techniques.
+Vibrations are natural processes in electrical machines
+and are created by the same dynamic forces.
+The human being directly perceives only a small range
+of low frequency vibrations. The oscillation velocity is
+turning the vibration into noise.
+
+
+Vibration and current analysis is a remote, notintrusive way to test the electrical machine being monitored. It is based on the analysis of the vibration and
+current waveform using complex mathematics.
+
+It is known that mechanical problems can cause a
+motor to seem to have significant electrical problems
+when being evaluated without vibration analysis. As an
+example a severely misalign shaft can create a variable
+air gap between stator and rotor. Therefore it is a good
+method to make a detailed motor vibration analysis.
+Vibration and current monitoring system requires
+storing of a large amount of data. Vibration is often
+measured with multiple sensors mounted on different
+parts of the machine. For each machine there are several
+typical vibration signals being analyzed in addition to
+some static parameters like load. 
+
+Vibration diagnostics 
+
+Vibration control and vibration diagnostics are
+different practical problems. In vibration diagnostics, the
+oscillation force that is applied to the defective zone
+defines the fault and the force is linearly related with the
+oscillation acceleration. For diagnostics, often both the
+vibration-acceleration and the vibration-velocity are
+measured in restricted low frequency ranges.
+
+The vibration signal is converted in electric signals. It
+is necessary to analyze this signal without loosing the
+diagnostic information. There are very strict requirements
+for the analyzing instruments. The operations that the
+vibration analyzing instruments must perform are the
+following:
+• Measurement of overall vibration level in a standard
+frequency range and using the units required by these
+standards.
+• Spectral analysis of the vibration, by using FFT.
+• Analysis of the oscillation power of separate
+vibration components extracted preliminary from the
+vibration signal. The analysis of the spectrum of random
+high frequency vibration signal is usually used 
+
+
+The analysis of vibration spectrum is used for the
+detection of bearing faults. The faults detection will be
+done by comparing two values: the amplitudes of the
+armonic components obtained from monitoring the
+vibration spectrum at different frequencies and the
+amplitudes of the armonic components at the same
+frequencies obtained from the reference spectrum
+-
