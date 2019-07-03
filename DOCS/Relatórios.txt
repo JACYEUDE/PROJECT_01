@@ -221,3 +221,8 @@ vibration spectrum at different frequencies and the
 amplitudes of the armonic components at the same
 frequencies obtained from the reference spectrum
 -
+
+
+NOTAS 03/07
+
+Entender como aumentar ou diminuira prioridade de uma tarefa, com TASK, gerenciamento do que ta escrito.  verificar o que são ambientes PREMPTIVOS
