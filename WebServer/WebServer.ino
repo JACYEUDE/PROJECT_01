@@ -7,7 +7,10 @@
 
 
 int x, y, z;
-
+int potPin = 0;     // set pin for potentiometer
+int recordData[20]; // Array will store key input presses with 1 equal pressed and 0 equal not pressed
+char serInString[10]; 
+int value;
 
 const char* ssid = "Millennium Falcon";
 const char* password = "19072008";
@@ -166,7 +169,4 @@ Serial.println(createJsonResponse());
 delay(1000);
 
   
-
-
-delay(200);
 }
