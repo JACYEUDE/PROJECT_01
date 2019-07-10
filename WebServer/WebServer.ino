@@ -86,7 +86,7 @@ String textoHTML;
   textoHTML +=  "<html><body><p><a href=http://127.0.0.1:5500/nodejs-server/public/index.html>LINK</a></p>";
       
   
-  textoHTML += "<h3 style=text-align:body;font-family:arial;>  HELLO SATAN ";
+  textoHTML += "<h3 style=text-align:body;font-family:arial;>  HELLO ";
   
   textoHTML += "<h3 style=text-align:center;font-family:tahoma;> X : " +String (x);
   
@@ -157,16 +157,11 @@ void loop(void){
 server.handleClient(); 
 readADXL345();
 delay(100);
-Serial.print("Acceleration in X : ");
-Serial.println(x);
-Serial.print("Acceleration in Y : ");
-Serial.println(y);
-Serial.print("Acceleration in Z : ");
-Serial.println(z);
+
 
 Serial.println(createJsonResponse());
 
-delay(1000);
+delay(100);
 
   
 }
