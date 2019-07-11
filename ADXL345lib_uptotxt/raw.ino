@@ -21,15 +21,16 @@ int8_t getraw(void)
         }
         delay(50);
         
-    Serial.println("Raw values:");
-    Serial.print("X: ");
-    Serial.print(x);
-    Serial.print(" Y: ");
-    Serial.print(y);
-    Serial.print(" Z: ");
-    Serial.println(z);
+        Serial.println("Raw values:");
+        Serial.print("X: ");
+        Serial.print(x);
+        Serial.print(" Y: ");
+        Serial.print(y);
+        Serial.print(" Z: ");
+        Serial.println(z);
 
-return 0;       
+    return 0;       
+    }
 }
 
 void setup()
@@ -49,6 +50,6 @@ acc.setSensitivity(ADXL345_RANGE_PM2G);
 acc.setOffsets(0, 0, 0);
 void loop()
 {
-getraw();
-delay(100);
+    getraw();
+    delay(100);
 }
