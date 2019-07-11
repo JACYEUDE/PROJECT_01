@@ -48,6 +48,7 @@ void setup()
 acc.setSensitivity(ADXL345_RANGE_PM2G);
     
 acc.setOffsets(0, 0, 0);
+}
 void loop()
 {
     getraw();

@@ -7,7 +7,7 @@ bool fail;
 
 void setup()
 {
-    Serial.begin(115200);
+    Serial.begin(9600);
     
     // set the I2C address of the accelerometer
     //
@@ -52,5 +52,5 @@ void loop()
     Serial.print(" Z: ");
     Serial.println(z);
 
-    delay(500);
+    delay(200);
 }
