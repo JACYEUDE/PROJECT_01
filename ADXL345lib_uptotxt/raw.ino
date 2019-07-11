@@ -6,7 +6,7 @@
 
 Accelerometer acc;
 
-int8_t getraw(void)
+int16_t getraw(void)
 {
     Serial.println("Gathering raw values...");    
 
