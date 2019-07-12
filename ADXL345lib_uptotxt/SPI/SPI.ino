@@ -22,7 +22,7 @@ float xg, yg, zg;
 
 void setup() {
 SPI.begin();
-SPI.setDataMode(SPI_MODE2);
+SPI.setDataMode(SPI_MODE3);
 SPI.setBitOrder(MSBFIRST);
 SPI.setFrequency(1000000);
 //SPI.setClockDivider(SPI_CLOCK_DIV16);
