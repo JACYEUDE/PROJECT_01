@@ -10,11 +10,11 @@
 //Nodemcu pin D5 GPIO 14 -----> pin SCL ADXL345
 //Nodemcu pin D6 GPIO 12 -----> pin SDO ADXL345
 //Nodemcu pin D7 GPIO 13 -----> pin SDA ADXL345
-//Nodemcu pin D8 GPIO 15 -----> pin CS ADXL345
+//Nodemcu pin D0 GPIO 16 -----> pin CS/SS ADXL345
 //Nodemcu pin 3.3 -----> pin VCC ADXL345
 //Nodemcu pin GND -----> pin GND ADXL345
 
-#define SS 16 //(IO15 -> IO5)
+#define SS 16 
 
 char values[10];
 int16_t x, y, z;
