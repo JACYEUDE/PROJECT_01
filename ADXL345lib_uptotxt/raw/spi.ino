@@ -1,93 +1,83 @@
 #include <SPI.h>
 
+
 //ADXL345
-#define BW_RATE 0x2C //Data rate and power mode control
-#define POWER_CTL 0x2D //Power Control Register
-#define DATA_FORMAT 0x31 //Data format control
-#define DATAX0 0x32 //X-Axis Data 0
 
-
-//Nodemcu pin D5 GPIO 14 -----> pin SCL ADXL345
-//Nodemcu pin D6 GPIO 12 -----> pin SDO ADXL345
-//Nodemcu pin D7 GPIO 13 -----> pin SDA ADXL345
-//Nodemcu pin D8 GPIO 15 -----> pin CS ADXL345
+#define SCLpin  D5//GPIO 14 Serial clock pin
+#define SDOpin  D6//GPIO 12 MISO pin
+#define SDApin  D7//GPIO 13 MOSI pin
+#define SSpin   D0// CS pin
+//#define SSpin   D8//GPIO 15 CHip Select
 //Nodemcu pin 3.3 -----> pin VCC ADXL345
 //Nodemcu pin GND -----> pin GND ADXL345
 
-#define SS 15 //(IO15 -> IO5)
+char BW_RATE = 0x2C;   // Data Rate and power mode control
+char POWER_CTL=0x2D;   // Power Control Register
+char DATA_FORMAT=0x31; // Data Format Register
+char DATAX0=0x32;
+char DATAX1=0x33;
+char DATAY0=0x34;
+char DATAY1=0x35;
+char DATAZ0=0x36;
+char DATAZ1=0x37;
 
-char values[10];
-int16_t x, y, z;
-float xg, yg, zg;
+int16_t X_Data, Y_Data, Z_Data;
 
-void setup() {
-SPI.begin();
-SPI.setDataMode(SPI_MODE2);
-SPI.setBitOrder(MSBFIRST);
-SPI.setFrequency(1000000);
-//SPI.setClockDivider(SPI_CLOCK_DIV16);
+char str[10];
+long lastMsg=0;
+byte TO_READ = 6;
 
 
-Serial.begin(250000);
 
-// SS Hight
-pinMode(SS, OUTPUT);
-digitalWrite(SS, HIGH);
 
-// ADXL345
-writeRegister(DATA_FORMAT, 0x03); // ±16g 10bit
-writeRegister(POWER_CTL, 0x08); //
-writeRegister(BW_RATE, 0x0F); //
+void setup()
+{
+  Serial.begin(115200);
+  SPI.begin(); 
+  SPI.beginTransaction(SPISettings(5000000,MSBFIRST,SPI_MODE3));
+  pinMode(SS, OUTPUT);
+  digitalWrite(SS, HIGH);
+ 
+  writeRegister(POWER_CTL, 0x00);// Configured in Stand By Mode
+  writeRegister(POWER_CTL, 0x08); // Configured in Measurement Mode
+  writeRegister(BW_RATE, 0x0C);
 }
 
-void loop() {
-// DATAX0
-readRegister(DATAX0, 6, values);
+void loop()
+{
+  readRegister(DATAX0, TO_READ, str);
+  X_Data= ((int16_t)str[1] << 8) | (int16_t)str[0];
+  Y_Data= ((int16_t)str[3] << 8) | (int16_t)str[2];
+  Z_Data= ((int16_t)str[5] << 8) | (int16_t)str[4];
 
-// 2Byte
-x = ((int16_t)values[1] << 8) | (int16_t)values[0];
-y = ((int16_t)values[3] << 8) | (int16_t)values[2];
-z = ((int16_t)values[5] << 8) | (int16_t)values[4];
-
-// 0.03125 = (16*2)/(2^10)
-xg = x * 0.03125;
-yg = y * 0.03125;
-zg = (z * 0.03125) - 1;
-
-
-
-//
-Serial.print(xg);
-Serial.print("\t");
-Serial.print(yg);
-Serial.print("\t");
-Serial.println(zg);
+  Serial.println(X_Data);
+  Serial.println(Y_Data);
+  Serial.println(Z_Data);
+  Serial.println();
 }
 
-void writeRegister(char registerAddress, char value) {
-// SPI
-digitalWrite(SS, LOW);
-//
-SPI.transfer(registerAddress);
-//
-SPI.transfer(value);
-// SPI
-digitalWrite(SS, HIGH);
+
+void writeRegister(char registerAddress, char value)
+{
+    digitalWrite(SS, LOW);
+    SPI.transfer(registerAddress);
+    SPI.transfer(value);
+    digitalWrite(SS, HIGH);
+    SPI.endTransaction();
 }
 
-void readRegister(char registerAddress, int16_t numBytes, char * values) {
-//
-char address = 0x80 | registerAddress;
-//
-if (numBytes > 1)address = address | 0x40;
-// SPI
-digitalWrite(SS, LOW);
-//
-SPI.transfer(address);
-//
-for (int16_t i = 0; i < numBytes; i++) {
-values[i] = SPI.transfer(0x00);
-}
-// SPI CS HIGH
-digitalWrite(SS, HIGH);
+void readRegister(char registerAddress, int16_t numBytes,char * str)
+{
+    char address = (0x80 | registerAddress);
+    if (numBytes > 1)address = address | 0x40;
+    digitalWrite(SS, LOW);
+    SPI.transfer(address);
+   
+       for (int16_t i = 0; i < numBytes; i++)
+       {
+            str = SPI.transfer(0x00);
+       }
+       
+    digitalWrite(SS, HIGH);
+    SPI.endTransaction();
 }
