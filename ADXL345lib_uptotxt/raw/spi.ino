@@ -23,7 +23,7 @@ char DATAZ1=0x37;
 
 int16_t X_Data, Y_Data, Z_Data;
 
-char str[10];
+unsigned char str[10];
 long lastMsg=0;
 byte TO_READ = 6;
 
