@@ -22,13 +22,13 @@ float xg, yg, zg;
 
 void setup() {
 SPI.begin();
-SPI.setDataMode(SPI_MODE0);
+SPI.setDataMode(SPI_MODE3);
 SPI.setBitOrder(MSBFIRST);
-SPI.setFrequency(1000000);
+SPI.setFrequency(5000000);
 //SPI.setClockDivider(SPI_CLOCK_DIV16);
 
 
-Serial.begin(250000);
+Serial.begin(9600);
 
 // SS Hight
 pinMode(SS, OUTPUT);
@@ -57,11 +57,14 @@ zg = (z * 0.03125) - 1;
 
 
 //
-Serial.print(xg);
+
+Serial.print(x);
+Serial.print(",");
 Serial.print("\t");
-Serial.print(yg);
+Serial.print(y);
+Serial.print(",");
 Serial.print("\t");
-Serial.println(zg);
+Serial.println(z);
 }
 
 void writeRegister(char registerAddress, char value) {
