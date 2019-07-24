@@ -2,8 +2,8 @@ import processing.serial.*;
 Serial mySerial;
 PrintWriter output;
 void setup() {
-   mySerial = new Serial( this, Serial.list()[0], 2000000 );
-   output = createWriter( "data.csv" );
+   mySerial = new Serial( this, Serial.list()[0], 9600 );
+   output = createWriter( "HJ.csv" );
 }
 void draw() {
     if (mySerial.available() > 0 ) {
