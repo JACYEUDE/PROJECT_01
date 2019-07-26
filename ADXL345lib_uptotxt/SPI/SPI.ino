@@ -28,7 +28,7 @@ SPI.setFrequency(5000000);
 //SPI.setClockDivider(SPI_CLOCK_DIV16);
 
 
-Serial.begin(115200);
+Serial.begin(512000);
 
 // SS Hight
 pinMode(SS, OUTPUT);
@@ -60,10 +60,8 @@ zg = (z * 0.03125) - 1;
 
 Serial.print(x);
 Serial.print(",");
-
 Serial.print(y);
 Serial.print(",");
-
 Serial.println(z);
 }
 
