@@ -1,3 +1,4 @@
+  
 #include <SPI.h>
 
 //ADXL345
@@ -5,7 +6,7 @@
 #define POWER_CTL 0x2D //Power Control Register
 #define DATA_FORMAT 0x31 //Data format control
 #define DATAX0 0x32 //X-Axis Data 0
-
+int analogInPin = A0;  // ESP8266 Analog Pin ADC0 = A0
 
 //Nodemcu pin D5 GPIO 14 -----> pin SCL ADXL345
 //Nodemcu pin D6 GPIO 12 -----> pin SDO ADXL345
@@ -18,7 +19,8 @@
 
 char values[10];
 int16_t x, y, z;
-float xg, yg, zg;
+int sensorValue;  // value read from the pot
+
 
 void setup() {
 SPI.begin();
@@ -28,19 +30,24 @@ SPI.setFrequency(5000000);
 //SPI.setClockDivider(SPI_CLOCK_DIV16);
 
 
-Serial.begin(512000);
+Serial.begin(250000);
 
 // SS Hight
 pinMode(SS, OUTPUT);
 digitalWrite(SS, HIGH);
 
+
 // ADXL345
 writeRegister(DATA_FORMAT, 0x03); // ±16g 10bit
 writeRegister(POWER_CTL, 0x08); //
 writeRegister(BW_RATE, 0x0F); //
+
+
+  
 }
 
 void loop() {
+
 // DATAX0
 readRegister(DATAX0, 6, values);
 
@@ -49,20 +56,18 @@ x = ((int16_t)values[1] << 8) | (int16_t)values[0];
 y = ((int16_t)values[3] << 8) | (int16_t)values[2];
 z = ((int16_t)values[5] << 8) | (int16_t)values[4];
 
-// 0.03125 = (16*2)/(2^10)
-xg = x * 0.03125;
-yg = y * 0.03125;
-zg = (z * 0.03125) - 1;
-
-
-
 //
 
 Serial.print(x);
 Serial.print(",");
 Serial.print(y);
 Serial.print(",");
-Serial.println(z);
+Serial.print(z);
+// read the analog in value
+sensorValue = analogRead(analogInPin);
+Serial.print(",");
+Serial.println(sensorValue);
+
 }
 
 void writeRegister(char registerAddress, char value) {
