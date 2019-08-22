@@ -2,6 +2,8 @@
 #include <SPI.h>
 
 //ADXL345
+//SXT 013 saida do fio RED + serie resistor -----> A0 e saida do white + capacitor 100 uf -----> ground
+
 #define BW_RATE 0x2C //Data rate and power mode control
 #define POWER_CTL 0x2D //Power Control Register
 #define DATA_FORMAT 0x31 //Data format control
