@@ -27,7 +27,7 @@ int sensorValue;  // value read from the pot
 void setup() {
 SPI.begin();
 SPI.setDataMode(SPI_MODE3);
-SPI.setBitOrder(MSBFIRST);
+SPI.setBitOrder(LSBFIRST);
 SPI.setFrequency(5000000);
 //SPI.setClockDivider(SPI_CLOCK_DIV16);
 
